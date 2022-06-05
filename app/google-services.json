@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770456099505",
+    "project_id": "agendaws-movil",
+    "storage_bucket": "agendaws-movil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770456099505:android:ed5e29e0ca3dc910bca090",
+        "android_client_info": {
+          "package_name": "com.example.agendaws"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770456099505-cg784n71a90v42q58m1raukbg5bj15b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYIt-zGZ-zd6yU2fibKGb8sqQIbvJRZOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770456099505-cg784n71a90v42q58m1raukbg5bj15b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">agendaWS</string>
+    <string name="userName">User Name</string>
+    <string name="userEmail">Email</string>
+    <string name="userPassword">Password</string>
+    <string name="btnRegisterUser">Register</string>
+    <string name="btnGetInto">Get Into</string>
+    <string name="titleRegister">Register</string>
+    <string name="titleLogin">Login</string>
+    <string name="btnCloseSession">Close Sessión</string>
+</resources>
