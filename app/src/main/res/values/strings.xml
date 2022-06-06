@@ -8,4 +8,10 @@
     <string name="titleRegister">Register</string>
     <string name="titleLogin">Login</string>
     <string name="btnCloseSession">Close Sessión</string>
+    <string name="title_mainActivity">My Events</string>
+    <string name="btnCreateEvent">Create</string>
+    <string name="hint_titleEvent">Title</string>
+    <string name="hint_dateEvent">dd/mm/yyyy</string>
+    <string name="hint_hourEvent">hh:mm</string>
+    <string name="titleNewEvent">New Event</string>
 </resources>

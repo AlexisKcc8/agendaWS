@@ -25,7 +25,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button btnGetInto;
     TextView txtRegister;
     EditText txtEmail, txtPassword;
-    FirebaseFirestore mFirestore;
     FirebaseAuth mAuth;
     Model_user user = null;
     @Override
@@ -48,23 +47,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void loginUser(Model_user user){
-        /*mAuth.signInWithEmailAndPassword(user.getEmail(), user.getPassword()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isComplete()){
-                    finish();
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(LoginActivity.this, "Error Al Iniciar Sesión", Toast.LENGTH_SHORT).show();
-            }
-        });*/
         mAuth.signInWithEmailAndPassword(user.getEmail(), user.getPassword())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -74,19 +56,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Toast.makeText(LoginActivity.this, "signInWithEmail:success", Toast.LENGTH_SHORT).show();
                             FirebaseUser userLog = mAuth.getCurrentUser();
                             if (userLog != null) {
-                                for (UserInfo profile : userLog.getProviderData()) {
-                                    // Id of the provider (ex: google.com)
-                                    String providerId = profile.getProviderId();
-                                    // UID specific to the provider
-                                    String uid = profile.getUid();
-                                    // Name, email address, and profile photo Url
-                                    String name = profile.getDisplayName();
-                                    String email = profile.getEmail();
-                                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                                    i.putExtra("id", uid);
-                                    i.putExtra("email", email);
-                                    startActivity(i);
-                                };
+                                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(i);
                             }
                         } else {
                             // If sign in fails, display a message to the user
