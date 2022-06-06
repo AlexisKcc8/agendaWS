@@ -15,8 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnCSession;
-    FloatingActionButton btnNewEvent;
+    FloatingActionButton btnNewEvent, btnCSession;
     TextView txtIdUser;
     FirebaseAuth mAuth;
     String emailUserLog;

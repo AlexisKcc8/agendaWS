@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".NewEventActivity">
 
+
     <EditText
         android:id="@+id/inpName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="@string/hint_titleEvent"
@@ -34,7 +35,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inpName"
-        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintVertical_bias="0.103"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
@@ -48,13 +49,13 @@
         android:hint="@string/hint_dateEvent"
         android:inputType="date"
         android:maxLines="1"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintTop_toBottomOf="@+id/categoria"
+        app:layout_constraintVertical_bias="0.114"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
@@ -68,55 +69,52 @@
         android:ems="10"
         android:hint="@string/hint_hourEvent"
         android:inputType="time"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inpDate"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.133"
         tools:ignore="TouchTargetSizeCheck" />
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ib_obtener_hora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoria"
-        app:layout_constraintVertical_bias="0.201"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/inpHour"
+        app:layout_constraintTop_toBottomOf="@+id/ib_obtener_fecha"
         app:srcCompat="@drawable/ic_time" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ib_obtener_fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginBottom="208dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoria"
-        app:layout_constraintVertical_bias="0.201"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/inpDate"
         app:srcCompat="@drawable/ic_date" />
 
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="143dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginTop="104dp"
         android:backgroundTint="@color/teal_700"
         android:text="@string/btnCreateEvent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ib_obtener_fecha"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inpHour" />
 
     <TextView
         android:id="@+id/inpCategoria"
@@ -135,8 +133,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/titleNewEvent"
         android:fontFamily="sans-serif-black"
+        android:text="@string/titleNewEvent"
+        android:textColor="@color/teal_700"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
